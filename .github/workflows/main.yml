@@ -21,4 +21,4 @@ jobs:
 
       - name: Run deployment script on server
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@43.201.146.39 'chmod +x ~/deploy.sh && bash ~/deploy.sh'
+          ssh -o StrictHostKeyChecking=no ubuntu@43.201.146.39 'uname -a'
