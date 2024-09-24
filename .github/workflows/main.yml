@@ -21,4 +21,4 @@ jobs:
 
       - name: Run deployment script on server
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@43.201.146.39 'bash -x /home/ubuntu/deploy.sh; echo "배포 스크립트 실행 완료"'
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} 'bash /home/ubuntu/deploy.sh'
