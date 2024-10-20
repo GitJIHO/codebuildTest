@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '21'  # 사용하고자 하는 Java 버전
+          distribution: 'temurin'
 
       - name: Run Tests
         run: ./gradlew test  # 테스트만 실행
