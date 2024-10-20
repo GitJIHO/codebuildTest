@@ -1,0 +1,22 @@
+name: Run Tests on Pull Request
+
+on:
+  pull_request:
+    branches:
+      - master  # PR이 열릴 때 기본 브랜치 이름을 여기에 입력하세요.
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '21'  # 사용하고자 하는 Java 버전
+
+      - name: Run Tests
+        run: ./gradlew test  # 테스트만 실행
